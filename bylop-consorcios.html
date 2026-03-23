@@ -200,7 +200,23 @@
         .miguel-cta-inner { background: linear-gradient(135deg, #000, #1a0000); border-radius: 32px; padding: 80px; display: grid; grid-template-columns: auto 1fr; gap: 60px; align-items: center; position: relative; overflow: hidden; }
         .miguel-cta-inner::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(227,6,20,0.15) 0%, transparent 70%); }
         .miguel-cta-photo { width: 200px; height: 200px; border-radius: 50%; overflow: hidden; border: 4px solid var(--red); box-shadow: 0 0 0 8px rgba(227,6,20,0.1); flex-shrink: 0; position: relative; z-index: 1; }
-        .miguel-cta-photo img { width: 100%; height: 100%; object-fit: cover; }on i { transform: rotate(45deg); }
+        .miguel-cta-photo img { width: 100%; height: 100%; object-fit: cover; }
+        .miguel-cta-photo-placeholder { width: 100%; height: 100%; background: linear-gradient(135deg, #1a1a1a, #2d0000); display: flex; align-items: center; justify-content: center; font-size: 5rem; color: var(--red); }
+        .miguel-cta-content { position: relative; z-index: 1; }
+        .miguel-cta-content .tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(227,6,20,0.15); border: 1px solid rgba(227,6,20,0.3); color: var(--red); padding: 6px 14px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; }
+        .miguel-cta-content h2 { font-size: 2.5rem; color: var(--white); margin-bottom: 16px; }
+        .miguel-cta-content p { color: rgba(255,255,255,0.6); font-size: 1.05rem; line-height: 1.8; margin-bottom: 32px; }
+        .miguel-cta-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
+
+        /* ── FAQ ── */
+        .faq { padding: 100px 0; background: var(--gray-light); }
+        .faq-container { max-width: 780px; margin: 0 auto; }
+        .faq-item { background: var(--white); border-radius: 12px; margin-bottom: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .faq-question { width: 100%; background: none; border: none; padding: 22px 24px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: 'Roboto', sans-serif; font-weight: 600; font-size: 0.95rem; color: var(--black); text-align: left; transition: background 0.2s; border-left: 4px solid transparent; }
+        .faq-question:hover { background: rgba(227,6,20,0.03); border-left-color: var(--red); }
+        .faq-item.active .faq-question { border-left-color: var(--red); }
+        .faq-question i { color: var(--red); transition: transform 0.3s; flex-shrink: 0; margin-left: 16px; }
+        .faq-item.active .faq-question i { transform: rotate(45deg); }
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
         .faq-item.active .faq-answer { max-height: 400px; }
         .faq-answer p { padding: 0 24px 24px; color: #666; line-height: 1.8; font-size: 0.95rem; }
@@ -217,7 +233,53 @@
         .form-group textarea { resize: vertical; min-height: 110px; }
         .btn-submit { width: 100%; padding: 16px; background: var(--red); color: var(--white); border: none; border-radius: 10px; font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: var(--transition); display: flex; align-items: center; justify-content: center; gap: 10px; }
         .btn-submit:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(227,6,20,0.3); }
-        .contact-info { display: flex; flex-direction: column; gap: 28px; }ooter-grid { grid-template-columns: 1fr 1fr; }
+        .contact-info { display: flex; flex-direction: column; gap: 28px; }
+        .contact-info-header { margin-bottom: 8px; }
+        .contact-info-header h3 { font-size: 1.6rem; margin-bottom: 8px; }
+        .contact-info-header p { color: #666; line-height: 1.7; }
+        .contact-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px; background: var(--gray-light); border-radius: 16px; }
+        .contact-item-icon { width: 44px; height: 44px; background: rgba(227,6,20,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--red); font-size: 1.1rem; flex-shrink: 0; }
+        .contact-item-label { font-weight: 700; font-size: 0.85rem; color: #333; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .contact-item-text { color: #666; font-size: 0.9rem; line-height: 1.5; }
+        .contact-item a { color: var(--red); font-weight: 600; text-decoration: none; }
+        .contact-item a:hover { color: var(--red-dark); }
+        .whatsapp-cta { display: flex; align-items: center; gap: 14px; background: #25D366; color: var(--white); padding: 18px 24px; border-radius: 16px; text-decoration: none; font-weight: 700; font-size: 1rem; transition: var(--transition); }
+        .whatsapp-cta:hover { background: #1fa855; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(37,211,102,0.35); }
+        .whatsapp-cta i { font-size: 1.6rem; }
+
+        /* ── FOOTER ── */
+        footer { background: var(--black); color: var(--white); padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 50px; margin-bottom: 40px; }
+        .footer-logo img { height: 38px; margin-bottom: 16px; object-fit: contain; }
+        .footer-desc { color: rgba(255,255,255,0.45); font-size: 0.88rem; line-height: 1.7; margin-bottom: 20px; }
+        .footer-social { display: flex; gap: 10px; }
+        .footer-social a { width: 38px; height: 38px; background: rgba(255,255,255,0.06); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 0.9rem; transition: var(--transition); text-decoration: none; }
+        .footer-social a:hover { background: var(--red); }
+        .footer-col h5 { font-size: 0.75rem; letter-spacing: 2px; color: rgba(255,255,255,0.3); margin-bottom: 16px; }
+        .footer-col a { display: block; color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.88rem; margin-bottom: 10px; transition: color 0.3s; }
+        .footer-col a:hover { color: var(--white); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; text-align: center; color: rgba(255,255,255,0.25); font-size: 0.8rem; }
+
+        /* ── WHATSAPP ── */
+        .whatsapp-float { position: fixed; bottom: 24px; right: 24px; z-index: 999; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.8rem; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: var(--transition); text-decoration: none; }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.5); }
+
+        /* ── REVEAL ── */
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1024px) {
+            .hero .container { grid-template-columns: 1fr; gap: 50px; padding: 60px 24px; text-align: center; }
+            .hero h1 { font-size: 3rem; }
+            .hero-ctas { justify-content: center; }
+            .miguel-card { max-width: 420px; margin: 0 auto; }
+            .express-grid, .totem-grid, .proof-grid, .contacto-grid { grid-template-columns: 1fr; gap: 40px; }
+            .miguel-cta-inner { grid-template-columns: 1fr; text-align: center; padding: 50px 30px; }
+            .miguel-cta-photo { margin: 0 auto; }
+            .miguel-cta-buttons { justify-content: center; }
+            .servicios-grid { grid-template-columns: 1fr 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
             .express-targets { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 768px) {
@@ -260,7 +322,35 @@
         }
     </style>
 </head>
-<body>n></span><span></span><span></span>
+<body>
+
+<!-- ═══════ NAVBAR ═══════ -->
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <a href="bylop-landing.html" class="navbar-logo">
+            <img src="https://bylopseguridad.com/wp-content/uploads/2023/05/Logoa-Alta_Mesa-de-trabajo-1-1-e1683748012468-1024x418.png" alt="BYLOP Seguridad Electrónica">
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#express">BYLOP Express</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#totem">Tótem</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="bylop-landing.html" class="nav-back">← Para hogares</a></li>
+        </ul>
+        <a href="#contacto" class="nav-cta">Cotizá ahora</a>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero" id="inicio" style="position:relative;overflow:hidden;">
+    <!-- Elementos decorativos — Manual de Marca BYLOP -->
+    <div class="dot-pattern-brand" style="top:80px;right:60px;">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
         <span></span><span></span><span></span><span></span><span></span>
     </div>
     <div class="brand-circle-deco" style="width:280px;height:280px;bottom:-100px;left:-80px;"></div>
@@ -296,7 +386,26 @@
             <span class="miguel-badge"><i class="fas fa-check-circle" style="color:var(--red)"></i> Atención directa con el dueño</span>
         </div>
     </div>
-</section>                </div>
+</section>
+
+<!-- ═══════ EXPRESS ═══════ -->
+<section class="express" id="express">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">BYLOP Express</span>
+            <h2>Seguridad integral en <span class="highlight">menos de 72 horas</span></h2>
+            <p>Instalamos todo el sistema completo antes de que termines de pensar si lo necesitás. Sin excusas, sin demoras.</p>
+        </div>
+        <div class="express-grid">
+            <div class="express-content reveal">
+                <div class="express-timer">
+                    <div>
+                        <div class="big-num">72</div>
+                    </div>
+                    <div>
+                        <div style="font-size:1.1rem;font-weight:700;">Horas</div>
+                        <div class="label">Instalación completa</div>
+                    </div>
                 </div>
                 <p>Desde que nos contactás hasta que tu sistema queda operativo, pasan menos de 72 horas. Nada de esperas, nada de "te llamamos la semana que viene".</p>
                 <ul class="express-includes">
@@ -480,7 +589,7 @@
     <div class="container">
         <div class="miguel-cta-inner">
             <div class="miguel-cta-photo">
-                <!-- FOTO DE MIGUEL: reemplazar el src cuando la tengas -->
+                <!-- FOTO DE MIGUEL: reemplazar src cuando la tengas -->
                 <!-- <img src="foto-miguel.jpg" alt="Miguel — BYLOP"> -->
                 <div class="miguel-cta-photo-placeholder"><i class="fas fa-user-tie"></i></div>
             </div>
